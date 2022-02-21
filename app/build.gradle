@@ -21,8 +21,21 @@ dependencies {
     // FEATURES modules
     implementation project(Modules.featureHome)
     implementation project(Modules.featureDetail)
+//    implementation 'com.github.mayuresh21.ArchApp-master:home:1.1'
+//    implementation 'com.github.mayuresh21.ArchApp-master:detail:1.1'
+
     // NAVIGATION
     implementation project(Modules.navigation)
+
+
+    /*implementation 'com.github.mayuresh21.ArchApp-master:common:1.1'
+    implementation 'com.github.mayuresh21.ArchApp-master:home:1.1'
+    implementation 'com.github.mayuresh21.ArchApp-master:navigation:1.1'
+    implementation 'com.github.mayuresh21.ArchApp-master:detail:1.1'
+    implementation 'com.github.mayuresh21.ArchApp-master:model:1.1'
+    implementation 'com.github.mayuresh21.ArchApp-master:repository:1.1'
+    implementation 'com.github.mayuresh21.ArchApp-master:remote:1.1'
+    implementation 'com.github.mayuresh21.ArchApp-master:local:1.1'*/
     // KOIN
     implementation Libraries.koin
     implementation Libraries.koinViewModel

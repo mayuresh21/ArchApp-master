@@ -6,6 +6,10 @@ dependencies {
     implementation project(Modules.remote)
     implementation project(Modules.local)
     api project(Modules.model)
+//    implementation 'com.github.mayuresh21.ArchApp-master:remote:1.1'
+//    implementation 'com.github.mayuresh21.ArchApp-master:local:1.1'
+//    implementation 'com.github.mayuresh21.ArchApp-master:model:1.1'
+
     // ANDROID
     implementation KotlinLibraries.kotlinCoroutineCore
     implementation AndroidLibraries.kotlinCoroutineAndroid

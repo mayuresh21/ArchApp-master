@@ -10,7 +10,7 @@
                 type="io.philippeboisney.model.User" />
         <variable
                 name="viewmodel"
-                type="io.philippeboisney.home.HomeViewModel" />
+                type="io.philippeboisney.util.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

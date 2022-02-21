@@ -1,4 +1,4 @@
-package io.philippeboisney.home.views
+package io.philippeboisney.util.views
 
 import androidx.recyclerview.widget.DiffUtil
 import io.philippeboisney.model.User

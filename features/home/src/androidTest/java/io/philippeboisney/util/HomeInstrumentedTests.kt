@@ -1,4 +1,4 @@
-package io.philippeboisney.home
+package io.philippeboisney.util
 
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.lifecycle.MutableLiveData
@@ -20,7 +20,7 @@ import io.mockk.mockk
 import io.mockk.verify
 import io.philippeboisney.common_test.datasets.UserDataset.FAKE_USERS
 import io.philippeboisney.common_test.espresso.RecyclerViewItemCountAssertion.Companion.withItemCount
-import io.philippeboisney.home.di.featureHomeModule
+import io.philippeboisney.util.di.featureHomeModule
 import io.philippeboisney.model.User
 import io.philippeboisney.repository.AppDispatchers
 import io.philippeboisney.repository.UserRepository

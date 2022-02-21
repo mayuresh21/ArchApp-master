@@ -6,7 +6,7 @@
 
     <!-- HOME FRAGMENT -->
     <fragment android:id="@+id/homeFragment"
-              android:name="io.philippeboisney.home.HomeFragment"
+              android:name="io.philippeboisney.util.HomeFragment"
               android:label="ArchApp">
 
         <!-- Go to Detail Fragment (Its graph is responsible to handle response) -->

@@ -1,9 +1,9 @@
-package io.philippeboisney.home
+package io.philippeboisney.util
 
 import androidx.lifecycle.*
 import io.philippeboisney.common.base.BaseViewModel
 import io.philippeboisney.common.utils.Event
-import io.philippeboisney.home.domain.GetTopUsersUseCase
+import io.philippeboisney.util.domain.GetTopUsersUseCase
 import io.philippeboisney.model.User
 import io.philippeboisney.repository.AppDispatchers
 import io.philippeboisney.repository.utils.Resource

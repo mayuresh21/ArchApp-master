@@ -1,16 +1,13 @@
-package io.philippeboisney.home
+package io.philippeboisney.util
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.FragmentNavigator
-import androidx.navigation.fragment.FragmentNavigatorExtras
 import io.philippeboisney.common.base.BaseFragment
 import io.philippeboisney.common.base.BaseViewModel
-import io.philippeboisney.home.databinding.FragmentHomeBinding
-import io.philippeboisney.home.views.HomeAdapter
+import io.philippeboisney.util.databinding.FragmentHomeBinding
+import io.philippeboisney.util.views.HomeAdapter
 import io.philippeboisney.model.User
 import org.koin.android.viewmodel.ext.android.viewModel
 
