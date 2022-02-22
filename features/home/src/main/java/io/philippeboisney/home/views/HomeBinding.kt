@@ -1,4 +1,4 @@
-package io.philippeboisney.util.views
+package io.philippeboisney.home.views
 
 import android.util.Log
 import android.view.View

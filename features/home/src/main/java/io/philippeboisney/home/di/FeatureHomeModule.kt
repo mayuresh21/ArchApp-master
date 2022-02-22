@@ -1,7 +1,7 @@
-package io.philippeboisney.util.di
+package io.philippeboisney.home.di
 
-import io.philippeboisney.util.HomeViewModel
-import io.philippeboisney.util.domain.GetTopUsersUseCase
+import io.philippeboisney.home.HomeViewModel
+import io.philippeboisney.home.domain.GetTopUsersUseCase
 import org.koin.android.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module
 

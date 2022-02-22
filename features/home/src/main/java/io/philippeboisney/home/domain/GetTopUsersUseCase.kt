@@ -1,4 +1,4 @@
-package io.philippeboisney.util.domain
+package io.philippeboisney.home.domain
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations

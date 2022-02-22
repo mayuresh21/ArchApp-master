@@ -1,4 +1,4 @@
-package io.philippeboisney.util
+package io.philippeboisney.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import io.philippeboisney.common.base.BaseFragment
 import io.philippeboisney.common.base.BaseViewModel
-import io.philippeboisney.util.databinding.FragmentHomeBinding
-import io.philippeboisney.util.views.HomeAdapter
+import io.philippeboisney.home.databinding.FragmentHomeBinding
+import io.philippeboisney.home.views.HomeAdapter
 import io.philippeboisney.model.User
 import org.koin.android.viewmodel.ext.android.viewModel
 

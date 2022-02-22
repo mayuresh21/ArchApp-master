@@ -1,12 +1,12 @@
-package io.philippeboisney.util
+package io.philippeboisney.home
 
 import androidx.lifecycle.*
 import io.philippeboisney.common.base.BaseViewModel
 import io.philippeboisney.common.utils.Event
-import io.philippeboisney.util.domain.GetTopUsersUseCase
 import io.philippeboisney.model.User
 import io.philippeboisney.repository.AppDispatchers
 import io.philippeboisney.repository.utils.Resource
+import io.philippeboisney.home.domain.GetTopUsersUseCase
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 

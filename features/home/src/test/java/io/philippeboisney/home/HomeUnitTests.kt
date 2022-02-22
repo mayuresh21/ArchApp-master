@@ -1,4 +1,4 @@
-package io.philippeboisney.util
+package io.philippeboisney.home
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
@@ -8,7 +8,7 @@ import io.mockk.*
 import io.philippeboisney.common.utils.Event
 import io.philippeboisney.common_test.datasets.UserDataset.FAKE_USERS
 import io.philippeboisney.common_test.extensions.blockingObserve
-import io.philippeboisney.util.domain.GetUtilityUseCase
+import io.philippeboisney.home.domain.GetTopUsersUseCase
 import io.philippeboisney.model.User
 import io.philippeboisney.navigation.NavigationCommand
 import io.philippeboisney.repository.AppDispatchers
@@ -30,8 +30,8 @@ class HomeUnitTests {
     @JvmField
     val instantExecutorRule = InstantTaskExecutorRule()
 
-    private lateinit var getTopUsersUseCase: GetUtilityUseCase
-    private lateinit var homeViewModel: UtilViewModel
+    private lateinit var getTopUsersUseCase: GetTopUsersUseCase
+    private lateinit var homeViewModel: HomeViewModel
     private val appDispatchers = AppDispatchers(Dispatchers.Unconfined, Dispatchers.Unconfined)
 
     @Before
@@ -45,7 +45,7 @@ class HomeUnitTests {
         val result = Resource.success(FAKE_USERS)
         coEvery { getTopUsersUseCase(false) } returns MutableLiveData<Resource<List<User>>>().apply { value = result }
 
-        homeViewModel = UtilViewModel(getTopUsersUseCase, appDispatchers)
+        homeViewModel = HomeViewModel(getTopUsersUseCase, appDispatchers)
         homeViewModel.users.observeForever(observer)
 
         verify {
@@ -62,7 +62,7 @@ class HomeUnitTests {
         val result = Resource.error(Exception("fail"), null)
         coEvery { getTopUsersUseCase(any()) } returns  MutableLiveData<Resource<List<User>>>().apply { value = result }
 
-        homeViewModel = UtilViewModel(getTopUsersUseCase, appDispatchers)
+        homeViewModel = HomeViewModel(getTopUsersUseCase, appDispatchers)
         homeViewModel.users.observeForever(observer)
         homeViewModel.snackBarError.observeForever(observerSnackbar)
 
@@ -79,7 +79,7 @@ class HomeUnitTests {
         val event = Event(NavigationCommand.To(HomeFragmentDirections.actionHomeFragmentToDetailFragment(FAKE_USERS.first().login)))
         coEvery { getTopUsersUseCase(false) } returns MutableLiveData<Resource<List<User>>>().apply { value = Resource.success(FAKE_USERS) }
 
-        homeViewModel = UtilViewModel(getTopUsersUseCase, appDispatchers)
+        homeViewModel = HomeViewModel(getTopUsersUseCase, appDispatchers)
         homeViewModel.userClicksOnItem(FAKE_USERS.first())
 
         Assert.assertEquals(event.peekContent(), homeViewModel.navigation.blockingObserve()!!.peekContent())
@@ -91,7 +91,7 @@ class HomeUnitTests {
         val result = Resource.success(FAKE_USERS)
         coEvery { getTopUsersUseCase(any()) } returns MutableLiveData<Resource<List<User>>>().apply { value = result }
 
-        homeViewModel = UtilViewModel(getTopUsersUseCase, appDispatchers)
+        homeViewModel = HomeViewModel(getTopUsersUseCase, appDispatchers)
         homeViewModel.users.observeForever(observer)
         homeViewModel.userRefreshesItems()
 
