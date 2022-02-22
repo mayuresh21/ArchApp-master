@@ -10,7 +10,7 @@ dependencies {
     implementation Libraries.retrofitGsonConverter
     implementation Libraries.httpLoggingInterceptor
     // DATA MODULE
-    implementation project(Modules.model)
+    api project(Modules.model)
 //    implementation 'com.github.mayuresh21.ArchApp-master:model:1.3'
     // KOIN
     implementation Libraries.koin

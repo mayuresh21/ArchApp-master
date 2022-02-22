@@ -1,7 +1,7 @@
 apply from: '../../android_feature_dependencies.gradle'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {

@@ -11,10 +11,13 @@ dependencies {
     api project(Modules.repository)
     api project(Modules.navigation)
     // KOIN (Because each feature has to handle its dependencies)
-    implementation Libraries.koin
-    implementation Libraries.koinViewModel
+//    implementation Libraries.koin
+//    implementation Libraries.koinViewModel
+
+    implementation "org.koin:koin-android:1.0.2"
+    implementation "org.koin:koin-android-viewmodel:1.0.2"
     // TEST
-    androidTestImplementation TestLibraries.androidTestRunner
+    /*androidTestImplementation TestLibraries.androidTestRunner
     androidTestImplementation TestLibraries.junit
     androidTestImplementation project(Modules.commonTest)
     androidTestImplementation TestLibraries.mockkAndroid
@@ -28,5 +31,5 @@ dependencies {
     testImplementation TestLibraries.mockk
     testImplementation TestLibraries.archCoreTest
     kaptAndroidTest TestLibraries.databinding
-    testImplementation project(Modules.commonTest)
+    testImplementation project(Modules.commonTest)*/
 }

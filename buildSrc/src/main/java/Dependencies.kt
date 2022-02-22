@@ -26,7 +26,7 @@ object Releases {
 
 object Versions {
     val multidex = "1.0.3"
-    val kotlin = "1.4.32"
+    val kotlin = "1.3.41"
     val gradle = "4.2.1"
     val compileSdk = 30
     val minSdk = 21

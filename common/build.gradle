@@ -2,8 +2,13 @@ apply plugin: 'com.android.library'
 apply from: '../android_commons.gradle'
 
 dependencies {
-    implementation AndroidLibraries.appCompat
-    implementation AndroidLibraries.navigation
-    implementation AndroidLibraries.navigationFrag
+//    implementation AndroidLibraries.appCompat
+//    implementation AndroidLibraries.navigation
+//    implementation AndroidLibraries.navigationFrag
     api project(Modules.navigation)
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+
 }
